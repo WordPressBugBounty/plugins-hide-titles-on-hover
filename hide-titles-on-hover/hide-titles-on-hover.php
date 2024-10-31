@@ -6,7 +6,7 @@ Author: Jose Mortellaro
 Author URI: https://josemortellaro.com
 Domain Path: /languages/
 Text Domain: hide-titles-on-hover
-Version: 0.0.5
+Version: 0.0.6
 */
 /*  This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 */
 defined( 'ABSPATH' ) || exit; // Exit if accessed directly
+
+define( 'EOS_HTOH_PLUGIN_URL', untrailingslashit( plugins_url( '', __FILE__ ) ) );
 
 add_action( 'wp_footer',function(){
   ?>
@@ -47,9 +49,9 @@ add_action( 'wp_footer',function(){
   <?php
 },999999 );
 
-add_filter( 'plugin_action_links_hide-titles-on-hover/hide-titles-on-hover.php', function ( $links ) {
-  // Add a settings link to the action links in the plugins page.
-  $settings_link = ' | <a class="htoh-upgrade" style="color:#B07700;font-weight:bold" target="_htoh" rel="noopener" href="https://shop.josemortellaro.com/downloads/custom-title-tooltip/">'. __( 'Upgrade','hide-titles-on-hover' ). ' <span style="position:relative;top:-10px;' . ( is_rtl() ? 'right' : 'left' ) . ':-6px;display:inline-block">👑</span></a>';
-  array_push( $links, $settings_link );
-  return $links;
-} );
+if( is_admin() ){
+	require_once untrailingslashit( dirname( __FILE__ ) ).'/admin/htoh-admin.php';
+	if( wp_doing_ajax() ){
+	  require_once untrailingslashit( dirname( __FILE__ ) ).'/admin/htoh-ajax.php';
+	}
+  }
