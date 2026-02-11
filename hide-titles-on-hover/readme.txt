@@ -1,41 +1,82 @@
-=== Hide Titles On Hover: hide tooltip when hover on links  ===
+=== Hide Tooltips on Hover – Clean Up Title Attributes Without Losing Accessibility ===
 Contributors: giuse
-Donate link: buymeacoffee.com/josem
 Tags: hide titles, hide tooltip, hide tooltips
-Tested up to: 6.7
+Tested up to: 6.9
 Stable tag: 1.0.0
 Requires at least: 4.6
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Hide tooltip when hover on links or whatever elements having a title attribute. But still keep the accessibility.
+Hide browser tooltips on hover while preserving accessibility for screen readers.
+
 
 
 == Description ==
 
-Normally, when you go with your mouse over an element that has a title attribute, a tooltip will appear on the screen.
+Remove native browser tooltips while preserving accessibility.
 
-After activation Hide Titles On Hover  will replace all the titles attributes with aria-label. You will have no problems with the accessibility, but you will not see the native tooltip of the browser on hover.
+By default, when you hover over an element with a title attribute, the browser displays a native tooltip. These tooltips often don’t match your website’s design and can be distracting or redundant.
 
-No settings, just activate it and that's it.
+Hide Titles On Hover solves this by replacing all title attributes with aria-label attributes. This preserves accessibility for screen readers while preventing tooltips from appearing on hover.
 
-== How to exclude Hide Titles On Hover on specific pages ==
-This plugin has no options. But if you don't want to hide the tooltips on hover on specific pages, you can still do it by installing <a href="https://wordpress.org/plugins/freesoul-deactivate-plugins/">Freesoul Deactivate Plugins</a> to deactivate Hide Titles On Hover where you don't need it.
+🎯 No settings required. Just install and activate.
 
-== PRO Version ==
-The PRO version of this plugin is <a href="https://shop.josemortellaro.com/downloads/custom-title-tooltip/" target="_ctt">Custom Title Tooltip</a>.
-The PRO version has a different title because it also gives you the possibility to keep the tooltips, but give them a unique style that fits with the style of your website.
+== ✅ Key Features ==
+🔧 Automatically removes all native browser tooltips
 
-== How to have <a href="https://shop.josemortellaro.com/downloads/custom-title-tooltip/" target="_ctt">custom title tooltips</a> with the PRO version ==
-* Install and activate <a href="https://shop.josemortellaro.com/downloads/custom-title-tooltip/" target="_ctt">Custom Title Tooltip</a>
-* From your WordPress backend click on Custom Title Tooltip
-* Set colours, position, radius, font size..., and save the changes
+♿ Fully accessible via aria-label for screen readers
 
+⚡ Zero configuration – plug and play
+
+🌐 Works site-wide out of the box
+
+🔍 Want to disable it on specific pages?
+While the plugin doesn’t have built-in settings, you can selectively disable it using the free plugin Freesoul Deactivate Plugins.
+
+This allows you to deactivate Hide Titles On Hover only on pages where you still want tooltips to appear.
+
+== 🚀 Upgrade to PRO – Custom Title Tooltip ==
+Looking for more control and a better user experience?
+
+Check out the PRO version: <a href="https://shop.josemortellaro.com/downloads/custom-title-tooltip/" target="_ctt">Custom Title Tooltip</a>
+
+With Custom Title Tooltip, you can:
+
+✅ Keep tooltips but fully customize their appearance
+
+🎨 Match tooltip design to your theme with controls for:
+
+Colors
+
+Font size
+
+Radius
+
+Tooltip position
+
+and more!
+
+== How to get started with Custom Title Tooltip: ==
+Install and activate Custom Title Tooltip
+
+Go to Custom Title Tooltip in your WordPress admin menu
+
+Configure your styles and save changes
+
+== 🙌 Ideal for: ==
+Designers who want full visual control
+
+Accessibility-conscious developers
+
+Minimalists who prefer a cleaner user experience
 
 
 == Changelog ==
 
+
+= 1.0.1 =
+* Fix: PHP warnings
 
 = 1.0.0 =
 *Removed: Email to admin
